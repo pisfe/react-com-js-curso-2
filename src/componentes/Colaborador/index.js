@@ -6,7 +6,9 @@ const Colaborador = ({ colaborador, corDeFundo, aoDeletar }) => {
         <div className="colaborador">
             <AiFillCloseCircle
                 className='deletar' 
-                onClick={aoDeletar}
+                onClick={() => {
+                    aoDeletar(colaborador.id)
+                }}
                 size={25}
             />
             <div className="cabecalho" style={{ backgroundColor: corDeFundo }}>
